@@ -14,6 +14,8 @@ def clicker():
           if is_run:
               x, y = pyautogui.position()
               pyautogui.click(x, y)
+      except pyautogui.FailSafeException:
+          is_run = False
       except KeyboardInterrupt:
           break
 
